@@ -21,7 +21,7 @@ require_relative './base'
 module IntuitOAuth
   module Migration
     class Migrate < Base
-      
+
       # Exchange an OAuth 1 token for an OAuth 2 token pair. It is used for apps that are using OAuth 1.0 and want to migrate
       # to OAuth 2.0.
       #
@@ -57,7 +57,7 @@ module IntuitOAuth
           client_secret: @client.secret
         }
 
-        IntuitOAuth::Transport.request('POST', migration_endpoint, headers, body)
+        IntuitOAuth::Transport.request('POST', migration_endpoint, headers, body.to_json)
       end
 
     end
