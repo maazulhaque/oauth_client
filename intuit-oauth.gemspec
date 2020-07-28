@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.add_dependency 'httparty', '~> 0.14.0'
-  spec.add_dependency 'json', '~> 1.8.3'
+  spec.add_dependency 'json', '>= 1.8.3', '< 2.4.0'
   # spec.add_dependency 'json_web_token', '~> 0.3.5'
   spec.add_dependency 'rsa-pem-from-mod-exp', '~> 0.1.0'
 
